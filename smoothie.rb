@@ -25,19 +25,11 @@ smoothie_ingredients = {
   'mango' => '1/4 cup',
   'hemp milk' => '1 cup'
 }
- 
- 
-# This function takes in all of the smoothie ingredients, chops
-# and mixes them up, and outputs a string of mixed characters,
-# removing any whitespace. 
-def blend(smoothie_ingredients)
-  # retrieves only the food items and not the measurements
-  smoothie_items = smoothie_ingredients.keys.join.delete(" ").split('').shuffle!.join 
-end
- 
- 
 
-
-puts blend(smoothie_ingredients)
+ 
 my_blender = Blender.new
+
+puts "Good morning, would you like to make your usual breakfast smoothie?"
+
+response = gets.chomp
 my_blender.make_smoothie(smoothie_ingredients)

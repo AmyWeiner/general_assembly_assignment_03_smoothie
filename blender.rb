@@ -6,12 +6,19 @@ class Blender
 
  def initialize(switched_on=false)
   @switched_on = switched_on
-  puts "The blender is currently off."
  end
 
  def toggle_state
    @switched_on == false ? @switched_on = true : @switched_on = false
  end
+
+# This function takes in all of the smoothie ingredients, chops
+# and mixes them up, and outputs a string of mixed characters,
+# removing any whitespace. 
+def blend(smoothie_ingredients)
+  # retrieves only the food items and not the measurements
+  return smoothie_ingredients.keys.join.delete(" ").split('').shuffle!.join 
+end
 
  def make_smoothie(smoothie_ingredients)
   if @switched_on == true
@@ -21,7 +28,8 @@ class Blender
     puts "the smoothie is now ready."
     puts ""
     sleep(1)
-    smoothie_items = smoothie_ingredients.keys.join.delete(" ").split('').shuffle!.join 
+    smoothie = blend(smoothie_ingredients)
+    puts smoothie
   else
     puts "Sorry, the blender is off."
     puts ""
@@ -30,4 +38,3 @@ class Blender
   end
  end
 end
-
