@@ -25,16 +25,13 @@ end
     puts "blending the smothie..."
     puts ""
     sleep(1)
-    puts "the smoothie is now ready."
+    puts "the smoothie is now ready, enjoy."
     puts ""
     sleep(1)
     smoothie = blend(smoothie_ingredients)
     puts smoothie
   else
     puts "Sorry, the blender is off."
-    puts ""
-    sleep(1)
-    puts "Please turn the blender on and try again."
   end
  end
 end

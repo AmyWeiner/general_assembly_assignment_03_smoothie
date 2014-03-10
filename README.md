@@ -1,0 +1,1 @@
+This program contains a Blender class, which can make smoothies, given a predetermined list of ingredients. The program prompts the user 
